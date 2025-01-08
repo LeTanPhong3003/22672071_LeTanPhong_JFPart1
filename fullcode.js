@@ -68,6 +68,10 @@ compareBMI(markBMI22, johnBMI22, "Data 2");
   
 console.log('Coding Challenge #3')
  
+function calculateAverage(score1, score2, score3) {
+    return (score1 + score2 + score3) / 3;
+}
+  
 function determineWinner(dolphinsScores, koalasScores) {
     const dolphinsAvg = calculateAverage(...dolphinsScores);
     const koalasAvg = calculateAverage(...koalasScores);
