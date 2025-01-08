@@ -18,15 +18,14 @@ const johnBMI1 = calculateBMI(johnWeight1, johnHeight1);
 const markBMI2 = calculateBMI(markWeight2, markHeight2);
 const johnBMI2 = calculateBMI(johnWeight2, johnHeight2);
 
-const markHigherBMI1 = markBMI1 > johnBMI1;
-const markHigherBMI2 = markBMI2 > johnBMI2;
-
-console.log("Data 1:");
-console.log("Mark's BMI:", markBMI1);
-console.log("John's BMI:", johnBMI1);
-console.log("Does Mark have a higher BMI than John? ", markHigherBMI1);
-
-console.log("\nData 2:");
-console.log("Mark's BMI:", markBMI2);
-console.log("John's BMI:", johnBMI2);
-console.log("Does Mark have a higher BMI than John? ", markHigherBMI2);
+function compareBMI(markBMI, johnBMI, dataset) {
+    if (markBMI > johnBMI) {
+      console.log(`${dataset}: Mark's BMI (${markBMI.toFixed(1)}) is higher than John's (${johnBMI.toFixed(1)})!`);
+    } else {
+      console.log(`${dataset}: John's BMI (${johnBMI.toFixed(1)}) is higher than Mark's (${markBMI.toFixed(1)})!`);
+    }
+  }
+  
+  compareBMI(markBMI1, johnBMI1, "Data 1");
+  compareBMI(markBMI2, johnBMI2, "Data 2");
+  
